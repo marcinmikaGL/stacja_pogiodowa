@@ -8,7 +8,7 @@
   uint8_t mac[6] = {0x00, 0x01, 0x02, 0x0C, 0x05, 0x05};
 
   #include <supla/network/esp_wifi.h>
-  Supla::ESPWifi wifi("szklarnia", "aaAA123456!!");
+  Supla::ESPWifi wifi("szklarnia", "**");
 
 
 float diameter = 2.75;
@@ -58,10 +58,10 @@ void setup() {
   attachInterrupt(digitalPinToInterrupt(2), rpm_fan, FALLING);
 
   // Replace the falowing GUID with value that you can retrieve from https://www.supla.org/arduino/get-guid
-  char GUID[SUPLA_GUID_SIZE] = {0xAE,0xDD,0x6E,0xE4,0x39,0x73,0x7E,0x8F,0xEC,0x91,0xC5,0x9E,0x32,0xCE,0x6D,0xA2};
+  char GUID[SUPLA_GUID_SIZE] = {2};
 
   // Replace the following AUTHKEY with value that you can retrieve from: https://www.supla.org/arduino/get-authkey
-  char AUTHKEY[SUPLA_AUTHKEY_SIZE] = {0xAB,0xF9,0x9A,0xE7,0x0E,0xBC,0x60,0xE0,0x89,0xA0,0x39,0x2F,0x1A,0x24,0xEE,0x7E};
+  char AUTHKEY[SUPLA_AUTHKEY_SIZE] = {};
 
 
    if (millis() - lastmillis >= 1000) {
